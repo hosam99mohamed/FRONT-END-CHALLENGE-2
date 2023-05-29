@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayisBlue: hsl(218, 22%, 67%);
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+     font-size: 16px;
+     background-color: var(--LightGray);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     width: 100%;
+     padding: 100px 30px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 100% ;
+    max-width: 550px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 14px 1px #00000024;
+    overflow: hidden;
+}
+.item {
+    padding: 30px;
+}
+.item-1 {
+    background-color: white;
+}
+.item-1 h2 {
+    color: var(--Cyan);
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.item-1 h3 {
+    color: var(--BrightYellow);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.item-1 p {
+    color: var(--GrayisBlue);
+    font-size: 13px;
+    line-height: 1.5rem;
+}
+.item-2 {
+    background-color: var(--Cyan);
+}
+.item-2 h3 {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.item-2 .price {
+    margin-bottom: 5px;
+}
+.item-2 .price span:first-of-type {
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 8px;
+    color: white;
+}
+.item-2 .price span:last-of-type{
+    font-size: 14px;
+    color: var(--LightGray);
+    opacity: .7;
+}
+.item-2 .access {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+}
+.item-2  .button {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--BrightYellow);
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px 1px #00000033;
+    border-radius: 8px;
+}
+.item-3 {
+    background-color: #4abebd;
+}
+.item-3 h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 20px;
+}
+.item-3 p {
+    color: var(--LightGray);
+    opacity: .8;
+    line-height: 1.5;
+}
+
+@media (min-width:768px) {
+    .container {
+        grid-template-columns: 1fr 1fr ;
+    }
+    .item-1 {
+        grid-area: 1/1/2/3;
+    }
+    .item-2,
+    .item-3 {
+        grid-row: 2 ;
+    }
+}
